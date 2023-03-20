@@ -2,6 +2,8 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { GetAllCommits } from '../../api/services'
 import { Commit } from './Commits.interface'
+import { CommitPreview } from '../../component/commit-preview/CommitPreview'
+import './Commits.css'
 
 export function Commits (): JSX.Element {
   const { data: commits } = useQuery(['allCommits'], async () => {
@@ -14,8 +16,13 @@ export function Commits (): JSX.Element {
   }
 
   return (
-    <div>
-      {commits.map((item: Commit) => <div>{item.sha}</div>)}
+    <div className='container'>
+      <h1 className='text-2xl mb-5'>All commits</h1>
+      {commits.map((item: Commit) => (
+        <div style={{ marginBottom: '10px' }}>
+          <CommitPreview commit={item} />
+        </div>
+      ))}
     </div>
   )
 }

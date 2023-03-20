@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { AppRouter } from './router';
+import './index.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {
