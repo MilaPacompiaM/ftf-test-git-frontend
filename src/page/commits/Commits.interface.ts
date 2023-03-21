@@ -6,6 +6,7 @@ export interface Commit {
     author: {
       name: string
       email: string
+      date: string
     }
   }
 }

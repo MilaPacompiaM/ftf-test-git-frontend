@@ -6,17 +6,3 @@
   background-color: rgb(240 249 255);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-.commit-content {
-  margin-left: 1.5rem;
-  padding-top: 0.25rem;
-}
-.commit-title {
-  color: #1a202c;
-  font-size: 1.25rem;
-  line-height: 1.25;
-}
-.commit-message {
-  color: #718096;
-  font-size: 1rem;
-  line-height: 1.5;
-}
