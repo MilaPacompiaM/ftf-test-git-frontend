@@ -1,3 +1,3 @@
 export enum ServicePaths {
-  ALL_COMMITS = '/'
+  ALL_COMMITS = '/commits'
 }

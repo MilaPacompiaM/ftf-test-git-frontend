@@ -18,11 +18,11 @@ export function CommitPreview (props: Props): JSX.Element {
               {commit.sha}
             </a>
           </h5>
-          <p className="font-light">
+          <p className="text-xs font-light text-gray-700 dark:text-gray-400">
             By {commit.commit.author.name}
           </p>
         </div>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
+        <p className="font-normal text-gray-500 dark:text-gray-400">
           {commit.commit.message}
         </p>
       </div>

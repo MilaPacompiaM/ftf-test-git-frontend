@@ -18,6 +18,7 @@ export function Commits (): JSX.Element {
   return (
     <div className='container'>
       <h1 className='text-2xl mb-5'>All commits</h1>
+      <p className='mb-5 underline decoration-sky-500'>This informations is automatically reloaded every 1 minute.</p>
       {commits.map((item: Commit) => (
         <div style={{ marginBottom: '10px' }}>
           <CommitPreview commit={item} />
