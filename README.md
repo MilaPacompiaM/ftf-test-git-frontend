@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Running the project
+Remember to use Node 16.17.x and npm 8.15.x, then:
+
+```bash
+npm ci
+npm run start
+```
+
+The app should be display in your browser, if not, please open [http://localhost:3001](http://localhost:3001)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
