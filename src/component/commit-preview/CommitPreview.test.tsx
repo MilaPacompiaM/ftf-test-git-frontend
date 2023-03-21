@@ -22,3 +22,22 @@ test('renders commit data', () => {
   expect(screen.getByText(/feat: update code/i)).toBeInTheDocument();
   expect(screen.getByText((new Date('2023-01-01T10:00:00Z')).toUTCString())).toBeInTheDocument();
 });
+
+test('sha should link to source', () => {
+  const mockCommit: Commit = {
+    sha: 'sha-1234567890',
+    html_url: 'https://www.google.com.pe/',
+    commit: {
+      author: {
+        name: 'Michael Jackson',
+        email: 'michael@test.com',
+        date: '2023-01-01T10:00:00Z'
+      },
+      message: 'feat: update code'
+    }
+  }
+  render(<CommitPreview commit={mockCommit} />);
+  const link = screen.getByText('sha-1234567890');
+
+  expect(link).toHaveAttribute('href', 'https://www.google.com.pe/')
+});
